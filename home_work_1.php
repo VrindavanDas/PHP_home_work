@@ -4,6 +4,7 @@
 $myArray = [12, 5, 78, 4, -32, 1, 34, 45, 0, -12, 234, 45];
 $maxLimit = 32;
 $fibonacciNumber = 20;
+$replaceNumber = 40;
 
 /*----------------Tasks resolve----------------*/
 function task0MaxElement($testArr) {
@@ -48,6 +49,28 @@ function task2FibonacciSequence($n) {
     var_dump($fib);
 }
 
+function task3ReplaceEl ($arr , $value) {
+    $resultArr = [];
+    $replaceCount = 0;
+
+    for ($i = 0; $i<count($arr); $i++) {
+
+        if ($arr[$i] >= $value) {
+
+            $resultArr[] = $value;
+            $replaceCount++;
+
+        } else {
+            $resultArr[] = $arr[$i];
+        }
+
+    }
+
+    var_dump($resultArr);
+    echo $replaceCount;
+
+}
+
 /*----------------Testing the tasks----------------*/
 echo "task 0 result:";
 echo "\n";
@@ -61,5 +84,11 @@ echo "task 2 result:";
 echo "\n";
 task2FibonacciSequence($fibonacciNumber);
 echo "\n\n";
+echo "task 3 result:";
+task3ReplaceEl($myArray, $replaceNumber);
+echo "\n\n";
 
 ?>
+
+
+
