@@ -126,6 +126,25 @@ function arrayDif ($array1, $array2) {
 
 }
 
+function sort ($array) {
+
+    for ($i=0; $i<count($array); $i++) {
+
+        for ($k=$i+1; $i<count($array); $k++) {
+
+            if ($array[$i]>$array[$k]) {
+
+                $value = $array[$k];
+                $array[$k] = $array[$i];
+                $array[$i] = $value;
+
+            }
+
+        }
+    }
+    return $array;
+}
+
 /*----------------Testing the tasks----------------*/
 echo "task 0 result: \n";
 task0MaxElement($myArray);
@@ -163,6 +182,12 @@ $difArr = arrayDif($asArray1, $asArray2);
 echo "task 6 result:";
 var_dump($difArr);
 echo "\n\n";
+
+sort($myArray);
+echo "task 7 result: \n";
+var_dump($myArray);
+echo "\n\n";
+
 
 ?>
 
