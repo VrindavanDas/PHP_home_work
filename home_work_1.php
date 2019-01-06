@@ -6,6 +6,9 @@ $maxLimit = 32;
 $fibonacciNumber = 20;
 $replaceNumber = 40;
 $searchValue = 5;
+$asArray1 = ["a" => "red", "b" => "green", "c" => "blue", "d" => "black", "e" => "orange"];
+$asArray2 = ["a" => "red", "b" => "green", "c" => "blue", "d" => "pink"];
+
 
 /*----------------Tasks resolve----------------*/
 function task0MaxElement($testArr) {
@@ -98,6 +101,31 @@ function inArray ($array, $value){
     return $result;
 }
 
+function arrayDif ($array1, $array2) {
+    $resultArr = [];
+
+    foreach ($array1 as $value1) {
+        $allowPush = true;
+
+        foreach ($array2 as $value2){
+
+            if ($value1 === $value2) {
+                $allowPush = false;
+                continue;
+            }
+
+        }
+
+        if($allowPush) {
+            $resultArr[] = $value1;
+        }
+
+    }
+
+    return $resultArr;
+
+}
+
 /*----------------Testing the tasks----------------*/
 echo "task 0 result: \n";
 task0MaxElement($myArray);
@@ -131,8 +159,10 @@ if($arrayIn) /*($arrayIn === true)*/ {
     echo "task 5 result: \n false \n\n";
 }
 
-
-
+$difArr = arrayDif($asArray1, $asArray2);
+echo "task 6 result:";
+var_dump($difArr);
+echo "\n\n";
 
 ?>
 
