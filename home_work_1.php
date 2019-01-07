@@ -126,11 +126,11 @@ function arrayDif ($array1, $array2) {
 
 }
 
-function sort ($array) {
+function sortArray ($array) {
 
     for ($i=0; $i<count($array); $i++) {
 
-        for ($k=$i+1; $i<count($array); $k++) {
+        for ($k=$i+1; $k<count($array); $k++) {
 
             if ($array[$i]>$array[$k]) {
 
@@ -183,9 +183,9 @@ echo "task 6 result:";
 var_dump($difArr);
 echo "\n\n";
 
-sort($myArray);
+$resultSort = sortArray($myArray);
 echo "task 7 result: \n";
-var_dump($myArray);
+var_dump($resultSort);
 echo "\n\n";
 
 
