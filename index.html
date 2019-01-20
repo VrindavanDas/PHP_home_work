@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my site</title>
+</head>
+<body>
+    <form action="script.php" method="POST">
+        <input type="text" name="userName">
+        <input type="text" name="userAge">
+        <button type="submit">Click me!</button>
+    </form>
+    <br>
+    <a href="script2.php">
+        <button>CLick me2!</button>
+    </a>
+    <br>
+    <br>
+    <a href="script3.php">
+        <button>Push the button</button>
+    </a>
+    <br>
+    <br>
+    <form action="script4.php" method="GET">
+        Your Name*:        <input type="text" required name="userName"><br>
+        Login*:            <input type="text" required name="login"><br>
+        Password*:         <input type="password" required name="password"><br>
+        Password again*:   <input type="password" required name="passwordAgain"><br>
+        eMail*:            <input type="email" required name="eMail"><br>
+        Gender:            <input type="text" name="gender"><br>
+        Date of birth:     <input type="date" name="dataOfBirth"><br>
+        Country and sity:  <input type="text" name="CountryAndSity"><br>
+                           <button type="submit">Send!</button><br>
+    </form>
+<br>
+<br>
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file[]"><br>
+        <input type="file" name="file[]"><br>
+        <input type="file" name="file[]"><br>
+        <button type="submit">Upload!</button>
+    </form>
+    <br>
+    <br>
+    <a href="/sessionTask/login.html">Task 5 with session</a>
+</body>
+</html>
